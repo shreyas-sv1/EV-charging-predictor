@@ -1,0 +1,43 @@
+.analytics-dashboard {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.analytics-card {
+  padding: 1.2rem 1.4rem;
+}
+
+.analytics-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.analytics-title {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.analytics-unit {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  background: var(--border-dim);
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+}
+
+.analytics-chart-area {
+  position: relative;
+  height: 120px;
+}
+
+@media (max-width: 640px) {
+  .analytics-dashboard {
+    grid-template-columns: 1fr;
+  }
+}

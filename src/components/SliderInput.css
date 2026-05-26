@@ -1,0 +1,100 @@
+.slider-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.slider-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider-label {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+}
+
+.slider-badge {
+  font-size: 0.68rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 10px;
+  border: 1px solid;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.slider-value {
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: var(--font-display);
+  min-width: 3rem;
+  text-align: right;
+  transition: color 0.3s;
+}
+
+.slider-track-wrapper {
+  position: relative;
+  height: 22px;
+  display: flex;
+  align-items: center;
+}
+
+.slider-range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  background: linear-gradient(
+    to right,
+    var(--thumb-color, #00e5ff) 0%,
+    var(--thumb-color, #00e5ff) var(--pct, 50%),
+    var(--border-dim) var(--pct, 50%),
+    var(--border-dim) 100%
+  );
+  transition: height 0.2s;
+}
+
+.slider-range:hover { height: 7px; }
+
+.slider-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--thumb-color, #00e5ff);
+  border: 2px solid var(--bg-base);
+  cursor: pointer;
+  box-shadow: 0 0 8px var(--thumb-color, rgba(0,229,255,0.5));
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.slider-range::-webkit-slider-thumb:hover {
+  transform: scale(1.3);
+  box-shadow: 0 0 18px var(--thumb-color, rgba(0,229,255,0.7));
+}
+
+.slider-range::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--thumb-color, #00e5ff);
+  border: 2px solid var(--bg-base);
+  cursor: pointer;
+}
+
+.slider-minmax {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
